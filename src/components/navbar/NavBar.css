@@ -1,0 +1,12 @@
+.navbar {
+    background-color: rgb(125, 55, 55);
+    color: white;
+}
+
+.pestañas{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+    
+    }
