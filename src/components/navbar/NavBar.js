@@ -1,77 +1,40 @@
-// /*#############################################
-//                  Importaciones
-// ###############################################*/
+/*#############################################
+                 Importaciones
+###############################################*/
 
-// //Modulos
-// //Estilos
-// import './NavBar.css'
-// import CardWidget from '../cardWidget/CardWidget.js'
-
-// //Componentes
-// //Core
-
-// /*#############################################
-//                  Logica
-// ###############################################*/
-// const NavBar = (props) => {//Funcion constructora
-
-
-//     return(
-        
-//         <header className='navbar'>
-//             <p>Mi primer enlace y te saludo = {props.saludo} y cuando me retiro digo = {props.despedida}</p>
-//             <CardWidget cantidad="10"/>
-//         </header>
-        
-//     )
-
-// }
-
-// /*#############################################
-//                  Exportacion
-// ###############################################*/
-// export default NavBar
-
-
-
-
-import React from 'react'
+//Modulos
+//Estilos
+import './NavBar.css'
 import CardWidget from '../cardWidget/CardWidget.js'
-import { Link } from 'react-router-dom'
-import "./NavBar.css"
 
-const NavBar = (props) => {
-  return (
-    <header className='navbar'>
-    <div><nav className="navbar navbar-expand-lg bg-body-tertiary">
-    <div className="container-fluid">
-          <a to="/">
-            <img src='./iconoreact.png' width="50" />
-          </a>
-        <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span className="navbar-toggler-icon"></span>
-        </button>
-            <div className="collapse navbar-collapse pestañas" id="navbarNav">
-              <ul className="navbar-nav">
-               <li className="nav-item">
-                <a className="nav-a" to="/Inicio">Inicio</a>
-               </li>
-               <li className="nav-item">
-            <a className="nav-a" to="/Productos">Productos</a>
-             </li>
-             <li className="nav-item">
-              <a className="nav-a" to="/SobreNosotros">Sobre Nosotros</a>
-              </li>
+//Componentes
+//Core
 
-        </ul> 
-      </div>
-    </div>
-  </nav></div>
-  <CardWidget cantidad="cantidad de stock :10"/>
-  </header>
-  
-  )
+/*#############################################
+                 Logica
+###############################################*/
+const NavBar = () => {//Funcion constructora
+
+
+    return (
+
+        <header className='header'>
+            <a href="#a" className="logo">Tienda</a>
+            <input className="menu-btn" type="checkbox" id="menu-btn" />
+            <label className="menu-icon" htmlFor="menu-btn"><span className="navicon"></span></label>
+            <ul className="menu">
+                <li><a href="#a">Productos</a></li>
+                <li><a href="#a">Categorias</a></li>
+                <li><a href="#a">Nosotros</a></li>
+                <li><a href="#a"><CardWidget cantidad="10" /></a></li>
+            </ul>
+        </header>
+
+    )
+
 }
 
+/*#############################################
+                 Exportacion
+###############################################*/
 export default NavBar
-

@@ -4,21 +4,30 @@
 
 //Modulos
 //Estilos
-import './Footer.css'
+import './Item.css'
+
 //Componentes
+import ItemCount from '../itemCount/ItemCount'
 //Core
 
 /*#############################################
                  Logica
 ###############################################*/
-const Footer = () => {//Funcion constructora
+const Item = (props) => {//Funcion constructora
+
+    const {nombre,descripcion, categoria, precio,stock} = props.data
+
+
 
     return(
         
-        <footer className="footer">
-        <p>este es el footer de mi app </p>
-        </footer>
-    
+        <div>
+           <p>{categoria}</p>
+           <p>{nombre}</p>
+           <p>{descripcion}</p>
+           <p>{precio}</p>
+           <ItemCount stock={stock}/>
+        </div>
         
     )
 
@@ -27,4 +36,4 @@ const Footer = () => {//Funcion constructora
 /*#############################################
                  Exportacion
 ###############################################*/
-export default Footer
+export default Item
