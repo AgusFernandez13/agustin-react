@@ -1,0 +1,36 @@
+[
+    {
+        "id": 1,
+        "idCategoria": 1,
+        "nombre": "Notebook",
+        "precio": 60000,
+        "stock": 30,
+        "img": "notebook-lenovo.jpg"
+    },
+    {
+        "id": 2,
+        "idCategoria": 2,
+        "nombre": "Celular",
+        "precio": 35000,
+        "stock": 20,
+        "img": "xiaomi-mi-9.jpg"
+    },
+    {
+        "id": 3,
+        "idCategoria": 3,
+        "nombre": "Smart Tv",
+        "precio": 57000,
+        "stock": 15,
+        "img": "smart-tv-novatech.jpg"
+    },
+    {
+        "id": 4,
+        "idCategoria": 4,
+        "nombre": "Camara ",
+        "marca": "iQual",
+        "precio": 8000,
+        "stock": 30,
+        "img": "camara-iqual.jpg"
+    }
+
+]

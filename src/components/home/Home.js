@@ -3,32 +3,28 @@
 ###############################################*/
 
 //Modulos
-
 //Estilos
-import './ItemListContainer.css'
-
+import './Home.css'
 //Componentes
-import ItemList from '../itemList/ItemList'
-
-
 //Core
 
 /*#############################################
                  Logica
 ###############################################*/
-const ItemListContainer = (props) => {//Funcion constructora
+const Home = () => {//Funcion constructora
 
-
+    console.log("Home");
     return(
         
-        <div className='main-section'>
-            <p>{props.greeting}</p>
+        <div>
+        <p >
+           Estamos en la Home
+        </p>
 
-            <div>
-                <h1>.........................................................................................................................</h1>
-            </div>
-            <ItemList />
+ 
+        
         </div>
+
         
     )
 
@@ -37,7 +33,4 @@ const ItemListContainer = (props) => {//Funcion constructora
 /*#############################################
                  Exportacion
 ###############################################*/
-export default ItemListContainer
-
-
-
+export default Home
