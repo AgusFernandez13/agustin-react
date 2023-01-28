@@ -3,29 +3,21 @@
 ###############################################*/
 
 //Modulos
-
 //Estilos
-import './ItemCategoryContainer.css'
-
+import './Cart.css'
 //Componentes
-import { useParams } from 'react-router-dom'
-import ItemCategory from '../itemCategory/ItemCategory'
-
-
 //Core
 
 /*#############################################
                  Logica
 ###############################################*/
-const ItemCategoryContainer = () => {//Funcion constructora
-
-const {categoriaId} = useParams()
+const Cart = () => {//Funcion constructora
 
     return(
         
-        <div className='main-section'>
-            <ItemCategory categoria={categoriaId}/>
-        </div>
+        <p >
+           Cart
+        </p>
         
     )
 
@@ -34,6 +26,4 @@ const {categoriaId} = useParams()
 /*#############################################
                  Exportacion
 ###############################################*/
-export default ItemCategoryContainer
-
-
+export default Cart

@@ -4,8 +4,8 @@
 
 //Modulos
 //Estilos
+import { useEffect, useState } from 'react'
 import './CardWidget.css'
-
 //Componentes
 //Core
 
@@ -14,13 +14,15 @@ import './CardWidget.css'
 ###############################################*/
 const CardWidget = (props) => {//Funcion constructora
 
-    return(
-       <div className='contenedorCarrito'>
-       
-            <img src="./carrito.png" width="50"></img>
-            <p>{props.cantidad}</p>
 
+
+    return(
+        
+        <div className='cart-box'>
+            <span className="material-symbols-outlined">shopping_cart</span>
+            <p>{props.cantidad}</p>
         </div>
+        
     )
 
 }
@@ -29,3 +31,6 @@ const CardWidget = (props) => {//Funcion constructora
                  Exportacion
 ###############################################*/
 export default CardWidget
+
+
+
