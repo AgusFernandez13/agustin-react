@@ -3,30 +3,39 @@
 ###############################################*/
 
 //Modulos
+import { useEffect, useState } from 'react'
+import { useParams, Link } from 'react-router-dom'
+
 
 //Estilos
-import './ItemCategoryContainer.css'
+import './ItemDetailContainer.css'
 
 //Componentes
-import { useParams } from 'react-router-dom'
-import ItemCategory from '../itemCategory/ItemCategory'
-
+import ItemDetail from '../itemDetail/ItemDetail'
 
 //Core
 
 /*#############################################
                  Logica
 ###############################################*/
-const ItemCategoryContainer = () => {//Funcion constructora
+const ItemDetailContainer = () => {//Funcion constructora
 
-const {categoriaId} = useParams()
+    const [productos, setProductos] = useState([])
 
-    return(
-        
-        <div className='main-section'>
-            <ItemCategory categoria={categoriaId}/>
-        </div>
-        
+    const { productoId } = useParams()
+
+    useEffect(()=>{
+        fetch(`https://fakestoreapi.com/products/${productoId}`)
+    .then(res=>res.json())
+    .then(productos => setProductos(<ItemDetail key={productos.id} id={"producto" + productos.id} data={productos} />))
+    },[productoId])
+
+
+    return (
+        <section className='itemDetail-box'>
+            <Link to="/productos">Volver a mis productos</Link>
+            {productos}
+        </section>
     )
 
 }
@@ -34,6 +43,5 @@ const {categoriaId} = useParams()
 /*#############################################
                  Exportacion
 ###############################################*/
-export default ItemCategoryContainer
 
-
+export default ItemDetailContainer
